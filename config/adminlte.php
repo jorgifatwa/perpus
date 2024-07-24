@@ -293,71 +293,101 @@ return [
     |
     */
 
-    'menu' => [
-        // Navbar items:
-        [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
-        ],
-
-        // Sidebar items:
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-            
-        ],
-        [
-            'text'        => 'Dashboard',
-            'url'         => 'dashboard',
-            'icon'        => 'far fa-fw fa-file',
-        ],
-        ['header' => 'Master Data'],
-        [
-            'text' => 'Kelas',
-            'url'  => 'admin/kelas',
-            'icon' => 'fas fa-fw fa-users',
-            'role'=>'user'
-            
-        ],
-        [
-            'text' => 'Anggota',
-            'url'  => 'admin/anggota',
-            'icon' => 'fas fa-fw fa-user',
-            'role'=>'admin'
-        ],
-        [
-            'text' => 'Buku',
-            'url'  => 'admin/book',
-            'icon' => 'fas fa-fw fa-book',
-            'role'=>'admin'
-        ],
-        ['header' => 'Transaksi'],
-        [
-            'text' => 'Peminjaman Buku',
-            'url'  => 'admin/pinjam',
-            'icon' => 'fas fa-fw fa-shopping-cart',
-            'role'=>'user'
-        ],
-        [
-            'text' => 'Buku Masuk',
-            'url'  => 'admin/buku_masuk',
-            'icon' => 'fas fa-fw fa-shopping-cart',
-            'role'=>'user'
-        ],
-        [
-            'text' => 'Buku Keluar',
-            'url'  => 'admin/buku_keluar',
-            'icon' => 'fas fa-fw fa-shopping-cart',
-            'role'=>'user'
-        ],
-        
+   'menu' => [
+    // Navbar items:
+    [
+        'type'         => 'navbar-search',
+        'text'         => 'search',
+        'topnav_right' => true,
     ],
+    [
+        'type'         => 'fullscreen-widget',
+        'topnav_right' => true,
+    ],
+
+    // Sidebar items:
+    [
+        'text' => 'blog',
+        'url'  => 'admin/blog',
+        'can'  => 'manage-blog',
+    ],
+    [
+        'text'        => 'Dashboard',
+        'url'         => 'dashboard',
+        'icon'        => 'far fa-fw fa-file',
+    ],
+    ['header' => 'Master Data', 'can' => 'view-admin'],
+    [
+        'text' => 'Kelas',
+        'url'  => 'admin/kelas',
+        'icon' => 'fas fa-fw fa-users',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Anggota',
+        'url'  => 'admin/anggota',
+        'icon' => 'fas fa-fw fa-user',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Buku',
+        'url'  => 'admin/book',
+        'icon' => 'fas fa-fw fa-book',
+        'can'  => 'view-admin',
+    ],
+    ['header' => 'Transaksi'],
+    [
+        'text' => 'Peminjaman Buku',
+        'url'  => 'admin/pinjam',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Peminjaman Buku',
+        'url'  => 'admin/pinjam',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-user',
+    ],
+    [
+        'text' => 'Buku Masuk',
+        'url'  => 'admin/buku_masuk',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Buku Masuk',
+        'url'  => 'admin/buku_masuk',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-user',
+    ],
+    [
+        'text' => 'Buku Keluar',
+        'url'  => 'admin/buku_keluar',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Buku Keluar',
+        'url'  => 'admin/buku_keluar',
+        'icon' => 'fas fa-fw fa-shopping-cart',
+        'can'  => 'view-user',
+    ],
+    ['header' => 'Logout'],
+    [
+        'text' => 'Logout',
+        'url'  => 'logout',
+        'icon' => 'fas fa-fw fa-power-off',
+        'can'  => 'view-admin',
+    ],
+    [
+        'text' => 'Logout',
+        'url'  => 'logout',
+        'icon' => 'fas fa-fw fa-power-off',
+        'can'  => 'view-user',
+    ],
+],
+
+
 
     /*
     |--------------------------------------------------------------------------

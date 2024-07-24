@@ -80,6 +80,7 @@ class AuthController extends Controller
             'fullname'=>'required',
             'email'=>'required|email',
             'password'=>'required',
+            'level'=>'required',
         ]);
             
         
@@ -89,8 +90,6 @@ class AuthController extends Controller
             return back()->withErrors($validate)->withInput();
         }
 
-        // tambahkan field level dan kita isi dengan admin
-        $request['level'] = 'admin';
 //      panggil model User dan jalankan fungsi ORM create untuk melakukan insert semua data
         User::create($request->all());
 

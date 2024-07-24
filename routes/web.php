@@ -40,6 +40,7 @@ Route::group(['prefix'=>'admin','middleware' => ['auth']], function () {
 
 Route::get('/',[AuthController::class,'index'])->name('login');
 Route::get('login',[AuthController::class,'index'])->name('login');
+Route::get('logout',[AuthController::class,'index'])->name('logout');
 Route::get('register',[AuthController::class,'register'])->name('register');
 Route::get('dashboard',[AuthController::class,'dashboard'])->name('dashboard');
 
