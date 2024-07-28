@@ -43,7 +43,7 @@ class BookController extends Controller
             Book::create([
                 'title'=>$request->title,
                 'isbn13'=>$request->isbn13,
-                'num_pages'=>$request->num_pages,
+                // 'num_pages'=>$request->num_pages,
                 'image'=>$imageName,
                 'author'=>$request->author,
                 'stock'=>$request->stock
@@ -92,7 +92,7 @@ class BookController extends Controller
         if(!$request->image){
             Book::where('book_id',$id)->update([
                 'title'=> $request->title,
-                'num_pages'=> $request->num_pages,
+                // 'num_pages'=> $request->num_pages,
                 'author'=> $request->author,
                 'stock'=> $request->stock
     
@@ -104,7 +104,7 @@ class BookController extends Controller
             Book::where('book_id',$id)->update([
                 'title'=> $request->title,
                 'image'=> $imageName,
-                'num_pages'=> $request->num_pages,
+                // 'num_pages'=> $request->num_pages,
                 'author'=> $request->author,
                 'stock'=> $request->stock
     

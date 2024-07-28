@@ -41,7 +41,7 @@ class BukuMasukController extends Controller
             $bukuMasuk = BukuMasuk::create($request->all());
             
             // Mendapatkan buku yang masuk berdasarkan ID
-            $buku = Book::findOrFail($request->buku_id);
+            $buku = Book::findOrFail($request->book_id);
             
             // Menambahkan stok buku yang masuk ke stok total
             $buku->stock += $request->quantity;
